@@ -137,7 +137,7 @@ export const setMealAndItems = (userInput) => {
   // Rule (Implicit): Only one side can be ordered
   // (Corollary) Rule 8: At lunch, multiple sides can be ordered
   if (sideCount > 1 && parsedMeal !== LUNCH) {
-    const errorMsg = `${menuItems[parsedMeal][LUNCH]} ${EXCESS_ITEMS}`;
+    const errorMsg = `${menuItems[parsedMeal][SIDE]} ${EXCESS_ITEMS}`;
     return createOrderObjectWithError(errorMsg);
   }
 
