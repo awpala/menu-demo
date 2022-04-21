@@ -6,20 +6,34 @@ const OrderOutput = ({
   hasError,
   errorMsg,
   orderSummary,
-}) => (
-  <div className="order-output">
-    TODO
-  </div>
-);
+}) => {
+  let content = null;
+
+  if (hasError) {
+    content = <p className="error-msg">{errorMsg}</p>;
+  }
+
+  if (hasError === false) {
+    content = <p className="order-summary">{orderSummary}</p>
+  }
+
+  return (
+    <div className="order-output">
+      {content}
+    </div>
+  );
+}
 
 OrderOutput.propTypes = {
-  hasError: PropTypes.bool.isRequired,
-  errorMsg: PropTypes.bool.isRequired,
+  hasError: PropTypes.bool,
+  errorMsg: PropTypes.string,
   orderSummary: PropTypes.string,
 };
 
 OrderOutput.defaultProps = {
-  orderSummary: '',
+  hasError: null,
+  errorMsg: null,
+  orderSummary: null,
 };
 
 export default OrderOutput;

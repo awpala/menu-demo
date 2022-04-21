@@ -1,0 +1,13 @@
+@import "../../Styles";
+
+.order-input {
+  @include flexer($dir: column, $just: center, $ai: center);
+
+  .user-actions {
+    @include flexer($just: center, $ai: center);
+
+    #user-button {
+      cursor: pointer;
+    }
+  }
+}

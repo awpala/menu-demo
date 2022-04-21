@@ -1,33 +1,22 @@
 // constants
-export const SET_MEAL = 'SET_MEAL';
-export const SET_MENU_ITEMS = 'SET_MENU_ITEMS';
+export const SET_ORDER_SUMMARY = 'SET_ORDER_SUMMARY';
 
 // actions
-export const setMeal = (meal) => ({
-  type: SET_MEAL,
-  meal,
-});
-
-export const setMenuItems = (menuItems) => ({
-  type: SET_MENU_ITEMS,
-  menuItems,
+export const setOrderSummary = (orderSummary) => ({
+  type: SET_ORDER_SUMMARY,
+  orderSummary,
 });
 
 // action handlers
 const ACTION_HANDLERS = {
-  [SET_MEAL]: (state, action) => ({
+  [SET_ORDER_SUMMARY]: (state, action) => ({
     ...state,
-    meal: action.meal,
-  }),
-  [SET_MENU_ITEMS]: (state, action) => ({
-    ...state,
-    menuItems: action.menuItems,
+    orderSummary: action.orderSummary,
   }),
 };
 
 const initialState = {
-  meal: null,
-  menuItems: null,
+  orderSummary: null,
 };
 
 const menuReducer = (state = initialState, action) => {

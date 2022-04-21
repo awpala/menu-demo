@@ -1,19 +1,21 @@
-const MEALS = {
+// menu selection
+
+export const MEALS = {
   BREAKFAST: 'Breakfast',
   LUNCH: 'Lunch',
   DINNER: 'Dinner',
 };
 
-const ITEMS = {
+export const ITEMS = {
   MAIN: 1,
   SIDE: 2,
   DRINK: 3,
   DESSERT: 4,
 };
 
-const DEFAULT_DRINK = 'Water';
+export const DEFAULT_DRINK = 'Water';
 
-const menuItems = {
+export const menuItems = {
   [MEALS.BREAKFAST]: {
     [ITEMS.MAIN]: 'Eggs',
     [ITEMS.SIDE]: 'Toast',
@@ -32,20 +34,17 @@ const menuItems = {
   },
 };
 
-const ERROR_PREFIX = 'Unable to process: ';
+export const JOIN_ELEMENTS_TOKEN = ', ';
 
-const errorMessages = {
+
+// errors
+
+export const ERROR_PREFIX = 'Unable to process: ';
+
+export const errorMessages = {
   INVALID_ORDER: 'Invalid order input format',
   MISSING_MAIN: 'Main is missing',
   MISSING_SIDE: 'Side is missing',
-  MISSING_DRINK: 'Drink is missing',
   MISSING_DESSERT: 'Dessert is missing',
-};
-
-export default {
-  MEALS,
-  DEFAULT_DRINK,
-  menuItems,
-  ERROR_PREFIX,
-  errorMessages,
+  EXCESS_ITEMS: 'cannot be ordered more than once',
 };

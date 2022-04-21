@@ -1,7 +1,13 @@
 @import './Styles';
 
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: $primary-color;
+
+  #root {
+    width: 100%;
+    height: 100%;
+    @include flexer($just: center, $ai: center);
+  }
 }
