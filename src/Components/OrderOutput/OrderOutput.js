@@ -19,6 +19,7 @@ const OrderOutput = ({
 
   return (
     <div className="order-output">
+      <p className="order-status">Order Summary:</p>
       {content}
     </div>
   );

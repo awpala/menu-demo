@@ -8,6 +8,17 @@ const makeAssertion = (actualOutput, expectedOutput) => {
 
 describe('Menu tests', () => {
   describe('General rules tests', () => {
+    it('Rule 1: An order consists of a meal and collection of comma-separated item IDs', () => {
+      makeAssertion(
+        getActualOutput('non-existent meal'),
+        {
+          orderSummary: null,
+          hasError: true,
+          errorMsg: 'Unable to process: Invalid order input format',
+        },
+      );
+    })
+
     it('Rule 2: The system should return the name of the items ordered', () => {
       makeAssertion(
         getActualOutput('Breakfast 1,2,3'),
@@ -48,6 +59,15 @@ describe('Menu tests', () => {
           errorMsg: 'Unable to process: Sandwich cannot be ordered more than once',
         },
       );
+
+      makeAssertion(
+        getActualOutput('Dinner 1,2,3,3'),
+        {
+          orderSummary: null,
+          hasError: true,
+          errorMsg: 'Unable to process: Wine cannot be ordered more than once',
+        },
+      )
     });
 
     it('Rule 5: Each order must contain a main and a side', () => {

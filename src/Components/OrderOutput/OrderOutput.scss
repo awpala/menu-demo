@@ -1,0 +1,13 @@
+@import "../../Styles";
+
+.order-output {
+  @include flexer($dir: column, $ai: center);
+
+  .order-summary {
+    color: $success;
+  }
+
+  .error-msg {
+    color: $error;
+  }
+}

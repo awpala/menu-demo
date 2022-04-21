@@ -8,9 +8,17 @@ const OrderInput = ({
   setErrorMsg,
   setOrderSummary,
 }) => {
+  // Rule 1: An order consists of a meal and a collection of comma-separated item IDs
   const [userInput, setUserInput] = useState('');
 
-  const onClick = () => {
+  const onClear = () => {
+    setUserInput('');
+    setErrorState(null);
+    setErrorMsg(null);
+    setOrderSummary(null);
+  }
+
+  const onSubmit = () => {
     const {
       hasError,
       errorMsg,
@@ -28,12 +36,18 @@ const OrderInput = ({
         <input
           id="user-input"
           type="text"
+          value={userInput}
           onChange={(({ target: { value }}) => setUserInput(value))}
         />
         <button
-          id="user-button"
-          tabIndex={0}
-          onClick={onClick}
+          className="user-button"
+          onClick={onClear}
+        >
+          Clear
+        </button>
+        <button
+          className="user-button"
+          onClick={onSubmit}
         >
           Submit Order
         </button>

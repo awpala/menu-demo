@@ -154,10 +154,10 @@ export const setMealAndItems = (userInput) => {
     const itemCount = parsedItemsCounts[item];
     const isDrinkItem = item === String(DRINK);
 
-    let itemStr = processedItem;
-
     // Rule 2: The system should return the name of the items ordered
     if (itemCount > 0) {
+      let itemStr = processedItem;
+
       // Rule 4: If multiple items are ordered, the number of items should be indicated
       if (itemCount > 1) {
         itemStr += `(${itemCount})`;

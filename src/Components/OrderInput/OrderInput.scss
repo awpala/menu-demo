@@ -6,8 +6,21 @@
   .user-actions {
     @include flexer($just: center, $ai: center);
 
-    #user-button {
+    #user-input {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+
+    .user-button {
       cursor: pointer;
+      border-radius: 4px;
+      background-color: $primary-color;
+      color: $secondary-color;
+
+      &:hover {
+        background-color: $secondary-color;
+        color: $primary-color;
+      }
     }
   }
 }
