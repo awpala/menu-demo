@@ -9,7 +9,7 @@ const ITEMS = {
   SIDE: 2,
   DRINK: 3,
   DESSERT: 4,
-}
+};
 
 const DEFAULT_DRINK = 'Water';
 
