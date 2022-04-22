@@ -32,8 +32,10 @@ npm test
 
 ## Other Notes
 
-The application is organized into the view `Menu`, which is compose of components `OrderInput` and `OrderOutput`. A redux store is used to manage global state across the application.
+The application is organized into the view `Menu`, which is composed of components `OrderInput` and `OrderOutput` (cf. `/src/Views` and `/src/Components`, respectively).
+
+A Redux store is used to manage global state across the application (cf. `/src/Reducers`).
 
 `/src/constants.js` contains global constants which provide templated information for menu selections/items and error messaging across the application.
 
-The principal business logic can be found in `/src/Utilities/parseOrder.js`, particularly in the function `setMealAndItems()`.
+The principal business logic can be found in `/src/Utilities/parseOrder.js`, particularly in the main parsing function `setMealAndItems()`.
