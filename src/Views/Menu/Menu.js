@@ -4,8 +4,8 @@ import OrderOutput from '../../Components/OrderOutput';
 import './Menu.scss';
 
 const Menu = () => (
-  <div className="Menu">
-    <div className="border">
+  <div className="menu">
+    <div className="menu-border">
       <h1>Welcome to our restaurant!</h1>
       <OrderInput />
       <OrderOutput />

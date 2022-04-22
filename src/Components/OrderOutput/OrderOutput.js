@@ -14,7 +14,7 @@ const OrderOutput = ({
   }
 
   if (hasError === false) {
-    content = <p className="order-summary">{orderSummary}</p>
+    content = <p className="order-summary">{orderSummary}</p>;
   }
 
   return (

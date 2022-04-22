@@ -17,7 +17,7 @@ describe('Menu tests', () => {
           errorMsg: 'Unable to process: Invalid order input format',
         },
       );
-    })
+    });
 
     it('Rule 2: The system should return the name of the items ordered', () => {
       makeAssertion(
@@ -67,7 +67,7 @@ describe('Menu tests', () => {
           hasError: true,
           errorMsg: 'Unable to process: Wine cannot be ordered more than once',
         },
-      )
+      );
     });
 
     it('Rule 5: Each order must contain a main and a side', () => {
@@ -106,10 +106,9 @@ describe('Menu tests', () => {
           orderSummary: 'Sandwich, Chips, Water',
           hasError: false,
           errorMsg: null,
-        }
+        },
       );
     });
-
   });
 
   describe('Breakfast rules tests', () => {
@@ -125,7 +124,7 @@ describe('Menu tests', () => {
             errorMsg: null,
           },
         );
-      }
+      },
     );
   });
 

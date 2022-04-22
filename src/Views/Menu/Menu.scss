@@ -1,12 +1,12 @@
 @import '../../Styles';
 
-.Menu {
+.menu {
   width: 100%;
   height: 100%;
   @include flexer($ai: center, $just: center);
   color: $secondary-color;
 
-  .border {
+  &-border {
     height: 100%;
     width: 100%;
     border: 2px solid $primary-color;
