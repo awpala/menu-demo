@@ -18,7 +18,12 @@ See `package.json` for full dependencies list.
 
 ## Local Development and Testing
 
-For development and testing, git clone this repository. All subsequent commands are assumed to be issued from the top-level directory (i.e., `.../menu-demo`).
+***N.B.*** All subsequent commands are assumed to be issued from the top-level directory (i.e., `.../menu-demo`).
+
+For development and testing, `git clone` this repository and then issue the following terminal command to install dependencies into `/node_modules`:
+```
+npm install
+```
 
 To develop locally, issue the following terminal command:
 ```
